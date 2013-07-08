@@ -8,7 +8,7 @@ describe User do
       password_confirmation: "foobar"
     )
 
-    expect(User.authenticate("foo@bar.com", "foobar")).to eq(user)
+    expect(user.authenticate("foobar")).to eq(user)
   end
 
   it "authenticates with an incorrect password" do
@@ -18,7 +18,7 @@ describe User do
       password_confirmation: "foobar"
     )
 
-    expect(User.authenticate("foo@bar.com", "incorrect")).to be_false
+    expect(user.authenticate("incorrect")).to be_false
   end
 
   it "reserves a ticket to a showing" do
