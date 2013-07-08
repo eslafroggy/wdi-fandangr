@@ -2,9 +2,9 @@ require 'spec_helper'
 
 describe Film do
   it "has many showings" do
-    movie = Movie.create(title: "The Godfather")
-    showing = movie.showings.create(showing_on: "2013-01-01 12:30:00")
+    film = Film.create(title: "The Godfather")
+    showing = film.showings.create(showing_on: "2013-01-01 12:30:00")
 
-    expect(movie.showings).to include(showing)
+    expect(film.showings).to include(showing)
   end
 end
