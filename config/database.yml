@@ -13,6 +13,7 @@ test:
   pool: 5
   username: sumeetjain
   password:
+  min_messages: WARNING
 
 production:
   adapter: postgresql
