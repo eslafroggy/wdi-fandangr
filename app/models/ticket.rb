@@ -3,4 +3,8 @@ class Ticket < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :showing
+
+  def available?
+    self.user.blank?
+  end
 end
