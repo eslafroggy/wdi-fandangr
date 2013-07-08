@@ -1,5 +1,9 @@
 require 'spec_helper'
 
 describe Ticket do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "can be purchased" do
+  end
+
+  it "cannot be purchased" do
+  end
 end

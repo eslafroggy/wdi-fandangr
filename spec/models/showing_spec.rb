@@ -1,5 +1,9 @@
 require 'spec_helper'
 
 describe Showing do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "has tickets available" do
+  end
+
+  it "is sold out" do
+  end
 end
