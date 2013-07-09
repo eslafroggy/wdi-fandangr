@@ -1,4 +1,9 @@
 Fandangr::Application.routes.draw do
+  get "login" => 'sessions#new', :as => :login
+  post "create_session" => 'sessions#create', :as => :create_session
+
+  root :to => "static_pages#home"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
