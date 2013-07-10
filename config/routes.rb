@@ -1,4 +1,7 @@
 Fandangr::Application.routes.draw do
+  resources :films
+
+
   get "login" => 'sessions#new', :as => :login
   post "create_session" => 'sessions#create', :as => :create_session
 
