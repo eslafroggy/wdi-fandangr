@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<h1><%= @film.title %></h1>
+
+<p><%= image_tag @film.poster %></p>
 
 <%= link_to 'Edit', edit_film_path(@film) %> |
 <%= link_to 'Back', films_path %>
