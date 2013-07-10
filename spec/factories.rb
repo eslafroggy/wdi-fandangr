@@ -6,6 +6,7 @@ FactoryGirl.define do
 
   factory :film do
     title "The Godfather"
+    poster File.open(File.join(Rails.root, '/public/poster.png'))
   end
 
   factory :showing do
