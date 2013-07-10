@@ -6,7 +6,16 @@ FactoryGirl.define do
 
   factory :film do
     title "The Godfather"
+    poster File.open(File.join(Rails.root, '/public/sample.png'))
   end
+
+  # SAVE
+
+  # Carrierwave sees that there is an image attached to 'poster'.
+
+  # Saves the image to '/uploads'.
+
+  # Changes the initial save request to have 'poster' set to a string that points to the saved image instead.
 
   factory :showing do
     showing_on "2013-01-01 12:30:00"
