@@ -7,4 +7,10 @@ CarrierWave.configure do |config|
   }
   config.fog_directory  = 'wdi-fandangr'             # required
   config.fog_public     = true                       # optional, defaults to true
+
+  if Rails.env.test?
+    config.storage = :file
+  else
+    config.storage = :fog
+  end
 end
